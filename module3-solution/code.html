@@ -1,0 +1,8 @@
+<h3>restaurant List</h3>
+<input type="text" ng-model="list.term">
+<button ng-click="list.search()">Narrow It Down For Me!</button> {{list.msg}}
+<ul>
+  <li ng-repeat="item in list.items"> {{item.name}},{{item.short_name}}:{{item.description}}
+    <button ng-click="list.delete($index);">Don't want this one!</button>
+  </li>
+</ul>
